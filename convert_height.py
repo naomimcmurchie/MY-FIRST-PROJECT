@@ -10,8 +10,10 @@ print ('Hello ' + full_name)
 # get the user height
 height = raw_input('please input your height in cm: ')
 height = int(height) * 0.01
-print('your height in m is')
-print(str(height) + 'm')
+
+print('your height in m is: ' + str(height) + 'm')
+
+# print(str(height) + 'm')
 
 
 # convert the user height
