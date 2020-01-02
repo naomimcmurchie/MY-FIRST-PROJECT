@@ -28,3 +28,10 @@ print('your wight in kg is: ' + str(weight) + ' kg')
 weight_in_stone = int(weight) * 0.15747304441777 
 weight_in_stone = round(weight_in_stone, 2 )
 print('your weight_in_stone is ' + str(weight_in_stone) + ' stone')
+
+
+# BMI
+height_height = height * height
+BMI = int(weight) / height_height
+
+print ('your BMI is: ' + str(BMI))
