@@ -42,7 +42,7 @@ answer = ''
 
 while answer != 'Y' and answer != 'N':
 	print('Do you consent to share your information?')
-	answer = raw_input('Y/N: ').upper()
+	answer = input('Y/N: ').upper()
 
 print('')
 if answer == 'Y':
@@ -55,7 +55,7 @@ print('')
 #------------------------------------------------------------------------------------------------------------------
 #                 get the user name
 #------------------------------------------------------------------------------------------------------------------
-name = raw_input('please input your name ')
+name = input('please input your name ')
 full_name = str(name)
 print ('Hello ' + full_name)
 
@@ -65,7 +65,7 @@ print ('Hello ' + full_name)
 #------------------------------------------------------------------------------------------------------------------
 while True:
 	try:
-		height =int(raw_input('please input your height in cm: '))
+		height =int(input('please input your height in cm: '))
 	except ValueError:
 		print('Sorry try again')
 	else:
@@ -86,7 +86,7 @@ print ('your height in feet is ' + str(height_in_feet) + ' feet ')
 
 while True:
 	try:
-		weight = int(raw_input('Please input your weight in kg: '))
+		weight = int(input('Please input your weight in kg: '))
 	except ValueError:
 		print('Sorry try again')
 	else:
@@ -113,15 +113,15 @@ print ('your BMI is: ' + str(BMI))
 # REPORT BMI COMMENTARY 
 
 if BMI < 18.50:
-	print'You are in the underweight range'
+	print('You are in the underweight range')
 elif 18.50 <= BMI <= 24.90:
-	print 'You are in the healthy weight range'
+	print('You are in the healthy weight range')
 elif 25.00 <= BMI <= 29.90:
-	print 'You are in the overweight range'
+	print('You are in the overweight range')
 elif 30.00 <= BMI <= 39.90:
-	print 'You are in the obese range'
+	print('You are in the obese range')
 else:
-	print 'You are extremely obese and at risk for serious health complications of obesity.'
+	print('You are extremely obese and at risk for serious health complications of obesity.')
 
 
 
