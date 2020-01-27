@@ -10,6 +10,7 @@
 #
 #------------------------------------------------------------------------------------------------------------------
 
+import os.path
 """
 PSEUDOCODE get user consent 
 
@@ -65,12 +66,13 @@ print ('Hello ' + full_name)
 #------------------------------------------------------------------------------------------------------------------
 while True:
 	try:
-		height =int(input('please input your height in cm: '))
+		height =float(input('please input your height in cm: '))
 	except ValueError:
 		print('Sorry try again')
 	else:
 		break
-height = int(height) * 0.01
+height = float(height * 0.01)
+height = round(height,2)
 print('your height in m is: ' + str("{:.2f}".format(height)) + ' m')
 
 # convert the user height
@@ -86,13 +88,13 @@ print ('your height in feet is ' + str(height_in_feet) + ' feet ')
 
 while True:
 	try:
-		weight = int(input('Please input your weight in kg: '))
+		weight = float(input('Please input your weight in kg: '))
 	except ValueError:
 		print('Sorry try again')
 	else:
 		break
 
-weight = int(weight)
+
 print('your weight in kg is: ' + str("{:.2f}".format(weight)) + ' kg')
 weight_in_stone = int(weight) * 0.15747304441777 
 weight_in_stone = round(weight_in_stone, 2 )
@@ -132,7 +134,40 @@ else:
 print('')
 if answer == 'Y':
 	print('Your data will be saved.')
+	my_output = str(full_name) + ', ' + str(height) + ',' + str(weight) + ',' + str(BMI)
+	with open('patients_data.csv' , 'a') as my_file:
+		my_file.write(my_output)
+		my_file.write('\n')
+
 elif answer =='N':
 	print('Your data will not be saved.')
 print('')
 print('Thank you for taking the test.')	
+
+
+
+"""
+with open('csvfile.csv','wb') as file:
+    for line in text:
+        file.write(line)
+        file.write('\n')
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
